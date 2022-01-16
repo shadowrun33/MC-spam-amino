@@ -11,4 +11,4 @@ $ cd MC-spam-amino
 
 $ pip install -r requirements.txt
 
-$ python multi_chat_spam.py
+$ python main.py
