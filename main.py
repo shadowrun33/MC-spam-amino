@@ -1,4 +1,4 @@
-import aminofix
+import amino
 import pyfiglet
 from colorama import init, Fore, Back, Style
 from threading import Thread
@@ -16,7 +16,7 @@ print("         ┃https://github.com/shadowrun33/")
 print("         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
 email = str(input("Почта/Email > "))
 password = str(input("Пароль/Password > "))
-client = aminofix.Client()
+client = amino.Client()
 client.login(email=email, password=password)
 
 print("Успешный вход/Login succeded")
@@ -27,7 +27,7 @@ for name, comId in zip(com.name, com.comId):
 
 comId = int(input("Id сообщества/Community Id > "))
 
-subclient = aminofix.SubClient(comId = comId, profile = client.profile)
+subclient = amino.SubClient(comId = comId, profile = client.profile)
 
 chat = subclient.get_chat_threads(start = 0, size = 100)
 for title, chatId in zip(chat.title, chat.chatId):
